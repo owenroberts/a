@@ -25,14 +25,13 @@ function setup() {
 }
 
 function mousePressed() {
-	start();
+	if (scene == 'start') {
+		fastLane.play();
+		scene = 'a';
+	}
 }
 
 function touchEnded() {
-	start();
-}
-
-function start() {
 	if (scene == 'start') {
 		fastLane.play();
 		scene = 'a';
